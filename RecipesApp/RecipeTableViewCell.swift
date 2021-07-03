@@ -52,7 +52,7 @@ class RecipeTableViewCell: UITableViewCell {
             recipeTitleLabel.leadingAnchor.constraint(equalTo: recipeImageView.trailingAnchor, constant: 8),
             recipeTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
             
-            recipeSubTitleLabel.topAnchor.constraint(equalTo: recipeTitleLabel.bottomAnchor, constant: 8),
+            recipeSubTitleLabel.topAnchor.constraint(equalTo: recipeTitleLabel.bottomAnchor),
             recipeSubTitleLabel.leadingAnchor.constraint(equalTo: recipeImageView.trailingAnchor, constant: 8),
             recipeSubTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
         ])
