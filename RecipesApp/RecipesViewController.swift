@@ -17,12 +17,33 @@ class RecipesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        getRecipes()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         setupUI()
     }
+    
+    private func getRecipes() {
+        do {
+            try NetworkingManager.shared.GET(type: RecipesResponse.self,
+                                             urlString: "https://recipesapi.herokuapp.com/api/v2/recipes") { result in
+                
+                switch result {
+                
+                case .success(let response):
+                    print("\(response)")
+                case .failure(let error):
+                    print("Failed to make API call \(#function) in \(#file) with error: \(error)")
+                }
+                
+            }
+        } catch {
+            print("Failed to make API call \(#function) in \(#file) with error: \(error)")
+        }
+    }
+    
 }
 
 extension RecipesViewController: UITableViewDataSource, UITableViewDelegate {

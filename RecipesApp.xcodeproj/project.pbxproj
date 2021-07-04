@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		494EB5C326912E390051EEA7 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494EB5C226912E390051EEA7 /* Recipe.swift */; };
+		494EB5C526912EBA0051EEA7 /* RecipesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494EB5C426912EBA0051EEA7 /* RecipesResponse.swift */; };
 		498C159426801259004F3239 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498C159326801259004F3239 /* RecipeTableViewCell.swift */; };
 		498C159626801584004F3239 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498C159526801584004F3239 /* NetworkingManager.swift */; };
 		49B40865267D5FCC008695D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B40864267D5FCC008695D6 /* AppDelegate.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		494EB5C226912E390051EEA7 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		494EB5C426912EBA0051EEA7 /* RecipesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesResponse.swift; sourceTree = "<group>"; };
 		498C159326801259004F3239 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		498C159526801584004F3239 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		49B40861267D5FCC008695D6 /* Recipes App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipes App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +73,8 @@
 				49B4086D267D5FCD008695D6 /* Assets.xcassets */,
 				49B4086F267D5FCD008695D6 /* LaunchScreen.storyboard */,
 				49B40872267D5FCD008695D6 /* Info.plist */,
+				494EB5C226912E390051EEA7 /* Recipe.swift */,
+				494EB5C426912EBA0051EEA7 /* RecipesResponse.swift */,
 			);
 			path = RecipesApp;
 			sourceTree = "<group>";
@@ -146,6 +152,8 @@
 				49B40869267D5FCC008695D6 /* RecipesViewController.swift in Sources */,
 				49B40865267D5FCC008695D6 /* AppDelegate.swift in Sources */,
 				49B40867267D5FCC008695D6 /* SceneDelegate.swift in Sources */,
+				494EB5C526912EBA0051EEA7 /* RecipesResponse.swift in Sources */,
+				494EB5C326912E390051EEA7 /* Recipe.swift in Sources */,
 				498C159626801584004F3239 /* NetworkingManager.swift in Sources */,
 				498C159426801259004F3239 /* RecipeTableViewCell.swift in Sources */,
 			);
