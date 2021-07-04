@@ -16,12 +16,10 @@ class NetworkingManager {
     
     func GET<T: Codable>(type: T.Type,
                          urlString: String,
-                         headers: [String:String]? = nil,
                          queryParameters: [String:String]? = nil,
                          completion: @escaping NetworkRequestCompletionHander<T>) throws {
         let urlRequest = try buildURLRequest(urlString: urlString,
                                              httpMethod: .GET,
-                                             headers: headers,
                                              queryParameters: queryParameters)
         makeRequest(type: type, urlRequest: urlRequest, completion: completion)
     }
@@ -73,8 +71,6 @@ extension NetworkingManager {
     
     private func buildURLRequest(urlString: String,
                                  httpMethod: HttpMethod = .GET,
-                                 body: [String:String]? = nil,
-                                 headers: [String: String]? = nil,
                                  queryParameters: [String:String]? = nil) throws -> URLRequest {
         guard let url = URL(string: urlString) else {
             throw APIError.invalidURL
@@ -86,14 +82,6 @@ extension NetworkingManager {
         
         var urlRequest = URLRequest(url: urlWithQueryParameters, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 30)
         urlRequest.httpMethod = httpMethod.rawValue
-        urlRequest.allHTTPHeaderFields = headers
-        if httpMethod != .GET || httpMethod != .DELETE {
-            do {
-                urlRequest.httpBody = try JSONEncoder().encode(body)
-            } catch {
-                throw APIError.failedToDecode
-            }
-        }
         return urlRequest
     }
     
