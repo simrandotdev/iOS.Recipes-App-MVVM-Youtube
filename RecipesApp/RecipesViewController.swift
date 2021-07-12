@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import SDWebImage
 
 class RecipesViewController: UIViewController {
+    
+    private var recipes = [Recipe]()
     
     let tableView: UITableView = {
         let tableView = UITableView()
@@ -34,6 +37,10 @@ class RecipesViewController: UIViewController {
                 
                 case .success(let response):
                     print("\(response)")
+                    DispatchQueue.main.async {
+                        self.recipes = response.recipes
+                        self.tableView.reloadData()
+                    }
                 case .failure(let error):
                     print("Failed to make API call \(#function) in \(#file) with error: \(error)")
                 }
@@ -52,13 +59,15 @@ extension RecipesViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return recipes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(RecipeTableViewCell.self)", for: indexPath) as! RecipeTableViewCell
-        cell.recipeTitleLabel.text = "Recipe title"
-        cell.recipeSubTitleLabel.text = "Recipe subtitle will come here."
+        let recipe = recipes[indexPath.row]
+        cell.recipeTitleLabel.text = recipe.title.withoutHtml
+        cell.recipeSubTitleLabel.text = "\(recipe.publisher)\n\(recipe.publishedId)\n\(String(format: "%.2f", recipe.socialScore))"
+        cell.recipeImageView.sd_setImage(with: URL(string: recipe.imageUrl))
         return cell
     }
 }
