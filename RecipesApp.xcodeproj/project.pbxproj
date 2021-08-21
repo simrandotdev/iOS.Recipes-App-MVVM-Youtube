@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		492B528E26ADE7C400CB36AD /* RecipesViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B528D26ADE7C400CB36AD /* RecipesViewModels.swift */; };
+		492B529126ADEA1B00CB36AD /* RecipeRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B529026ADEA1B00CB36AD /* RecipeRepositories.swift */; };
 		494EB5C326912E390051EEA7 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494EB5C226912E390051EEA7 /* Recipe.swift */; };
 		494EB5C526912EBA0051EEA7 /* RecipesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494EB5C426912EBA0051EEA7 /* RecipesResponse.swift */; };
 		49676370269BF43200A022AB /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4967636F269BF43200A022AB /* SDWebImage */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		492B528D26ADE7C400CB36AD /* RecipesViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewModels.swift; sourceTree = "<group>"; };
+		492B529026ADEA1B00CB36AD /* RecipeRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRepositories.swift; sourceTree = "<group>"; };
 		494EB5C226912E390051EEA7 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		494EB5C426912EBA0051EEA7 /* RecipesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesResponse.swift; sourceTree = "<group>"; };
 		49676371269BF4BB00A022AB /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		492B528F26ADEA0C00CB36AD /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				492B529026ADEA1B00CB36AD /* RecipeRepositories.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		49B40858267D5FCC008695D6 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +132,7 @@
 		49B40863267D5FCC008695D6 /* RecipesApp */ = {
 			isa = PBXGroup;
 			children = (
+				492B528F26ADEA0C00CB36AD /* Repositories */,
 				492B528B26ADE77700CB36AD /* Utils */,
 				492B528A26ADE77100CB36AD /* Support */,
 				492B528926ADE76800CB36AD /* ViewModels */,
@@ -214,6 +225,7 @@
 				49B40869267D5FCC008695D6 /* RecipesViewController.swift in Sources */,
 				49B40865267D5FCC008695D6 /* AppDelegate.swift in Sources */,
 				49B40867267D5FCC008695D6 /* SceneDelegate.swift in Sources */,
+				492B529126ADEA1B00CB36AD /* RecipeRepositories.swift in Sources */,
 				494EB5C526912EBA0051EEA7 /* RecipesResponse.swift in Sources */,
 				49676372269BF4BB00A022AB /* String+Extensions.swift in Sources */,
 				494EB5C326912E390051EEA7 /* Recipe.swift in Sources */,
