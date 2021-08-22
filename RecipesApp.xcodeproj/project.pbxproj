@@ -21,6 +21,7 @@
 		49B4086C267D5FCC008695D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B4086A267D5FCC008695D6 /* Main.storyboard */; };
 		49B4086E267D5FCD008695D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B4086D267D5FCD008695D6 /* Assets.xcassets */; };
 		49B40871267D5FCD008695D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B4086F267D5FCD008695D6 /* LaunchScreen.storyboard */; };
+		49B5BA4426D2F50D002329E6 /* RecipeItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B5BA4326D2F50D002329E6 /* RecipeItemViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		49B4086D267D5FCD008695D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49B40870267D5FCD008695D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49B40872267D5FCD008695D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49B5BA4326D2F50D002329E6 /* RecipeItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeItemViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				492B528D26ADE7C400CB36AD /* RecipesViewModels.swift */,
+				49B5BA4326D2F50D002329E6 /* RecipeItemViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				49B40867267D5FCC008695D6 /* SceneDelegate.swift in Sources */,
 				492B529126ADEA1B00CB36AD /* RecipeRepositories.swift in Sources */,
 				494EB5C526912EBA0051EEA7 /* RecipesResponse.swift in Sources */,
+				49B5BA4426D2F50D002329E6 /* RecipeItemViewModel.swift in Sources */,
 				49676372269BF4BB00A022AB /* String+Extensions.swift in Sources */,
 				494EB5C326912E390051EEA7 /* Recipe.swift in Sources */,
 				492B528E26ADE7C400CB36AD /* RecipesViewModels.swift in Sources */,

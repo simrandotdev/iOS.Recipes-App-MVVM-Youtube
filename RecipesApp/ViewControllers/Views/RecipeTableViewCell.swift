@@ -57,4 +57,10 @@ class RecipeTableViewCell: UITableViewCell {
             recipeSubTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
         ])
     }
+    
+    func bind(viewModel: RecipeItemViewModel) {
+        recipeTitleLabel.text = viewModel.recipeTitle.withoutHtml
+        recipeSubTitleLabel.text = "\(viewModel.recipeSubtitle)"
+        recipeImageView.sd_setImage(with: URL(string: viewModel.recipeImageUrl))
+    }
 }

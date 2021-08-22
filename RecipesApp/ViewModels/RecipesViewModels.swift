@@ -11,7 +11,7 @@ protocol RecipesViewModelDelegate: AnyObject {
 
 class RecipesViewModel {
     
-    private(set) var recipes = [Recipe]()
+    private(set) var recipes = [RecipeItemViewModel]()
     
     public weak var delegate: RecipesViewModelDelegate?
     
@@ -24,7 +24,7 @@ class RecipesViewModel {
             case .success(let recipes):
                 print("\(recipes)")
                 DispatchQueue.main.async {
-                    self.recipes = recipes
+                    self.recipes = recipes.map { RecipeItemViewModel(recipe: $0) }
                     self.delegate?.onSuccessfullyRecipesLoaded()
                 }
             case .failure(let error):

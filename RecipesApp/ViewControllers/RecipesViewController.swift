@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  RecipesAppMVVMPractice
-//
-//  Created by jc on 2021-06-18.
-//
-
 import UIKit
 import SDWebImage
 
@@ -41,10 +34,8 @@ extension RecipesViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(RecipeTableViewCell.self)", for: indexPath) as! RecipeTableViewCell
-        let recipe = recipesViewModel.recipes[indexPath.row]
-        cell.recipeTitleLabel.text = recipe.title.withoutHtml
-        cell.recipeSubTitleLabel.text = "\(recipe.publisher)\n\(recipe.publishedId)\n\(String(format: "%.2f", recipe.socialScore))"
-        cell.recipeImageView.sd_setImage(with: URL(string: recipe.imageUrl))
+        let recipeViewModel = recipesViewModel.recipes[indexPath.row]
+        cell.bind(viewModel: recipeViewModel)
         return cell
     }
 }
