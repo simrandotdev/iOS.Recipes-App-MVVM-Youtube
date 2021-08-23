@@ -3,7 +3,16 @@ import SDWebImage
 
 class RecipesViewController: UIViewController {
     
-    private let recipesViewModel = RecipesViewModel()
+    private let recipesViewModel: RecipesViewModel
+    
+    init(recipesViewModel: RecipesViewModel) {
+        self.recipesViewModel = recipesViewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     let tableView: UITableView = {
         let tableView = UITableView()

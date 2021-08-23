@@ -5,9 +5,16 @@ import Foundation
 
 class RecipeRepositories {
     
+    private let http: NetworkingManager
+    
+    init(with networkingManager: NetworkingManager) {
+        self.http = networkingManager
+    }
+    
+    
     func getRecipes(completion: @escaping (Result<[Recipe], APIError>) -> Void) {
         do {
-            try NetworkingManager.shared.GET(type: RecipesResponse.self,
+            try http.GET(type: RecipesResponse.self,
                                              urlString: "https://recipesapi.herokuapp.com/api/v2/recipes") { result in
                 
                 switch result {

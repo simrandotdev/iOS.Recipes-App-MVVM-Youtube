@@ -15,7 +15,12 @@ class RecipesViewModel {
     
     public weak var delegate: RecipesViewModelDelegate?
     
-    private let repo = RecipeRepositories()
+    private let repo: RecipeRepositories
+    
+    init(recipeRepository: RecipeRepositories) {
+        self.repo = recipeRepository
+    }
+    
     
     func getRecipes() {
         repo.getRecipes { result in
